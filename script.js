@@ -134,33 +134,28 @@ function changePicture(user, computer) {
 function game(usersChoice) {
   const computerChoice = getComputerChoice();
 
-  switch (usersChoice + computerChoice) {
-    case "pr":
-      win(usersChoice, computerChoice);
-      break;
-    case "rs":
-      win(usersChoice, computerChoice);
-      break;
-    case "sp":
-      win(usersChoice, computerChoice);
-      break;
-    case "rp":
-      lose(usersChoice, computerChoice);
-      break;
-    case "sr":
-      lose(usersChoice, computerChoice);
-      break;
-    case "ps":
-      lose(usersChoice, computerChoice);
-      break;
-    case "ss":
-      draw(usersChoice, computerChoice);
-      break;
-    case "pp":
-      draw(usersChoice, computerChoice);
-      break;
-    case "rr":
-      draw(usersChoice, computerChoice);
-      break;
+  if (usersChoice === computerChoice) {
+    draw(usersChoice, computerChoice);
+  } else {
+    switch (usersChoice + computerChoice) {
+      case "pr":
+        win(usersChoice, computerChoice);
+        break;
+      case "rs":
+        win(usersChoice, computerChoice);
+        break;
+      case "sp":
+        win(usersChoice, computerChoice);
+        break;
+      case "rp":
+        lose(usersChoice, computerChoice);
+        break;
+      case "sr":
+        lose(usersChoice, computerChoice);
+        break;
+      case "ps":
+        lose(usersChoice, computerChoice);
+        break;
+    }
   }
 }
