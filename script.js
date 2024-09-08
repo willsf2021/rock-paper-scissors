@@ -85,10 +85,15 @@ playAgain.addEventListener("click", () => {
   computerChoiceContainer.classList.remove("paper");
   computerChoiceContainer.classList.remove("scissors");
   computerChoiceContainer.classList.remove("rock");
+  imageUser.src = "";
+  imageComputer.src = "";
   initialContainer_div.style.display = "inline-block";
 });
 
 function changePicture(user, computer) {
+  userChoiceContainer.classList.remove("paper", "scissors", "rock");
+  computerChoiceContainer.classList.remove("paper", "scissors", "rock");
+
   setTimeout(() => {
     computerChoiceContainer.style.display = "flex";
   }, 500);
