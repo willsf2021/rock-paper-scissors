@@ -1,4 +1,6 @@
-let scoreValue = 0;
+let scoreValue = Number(localStorage.getItem("scoreValue"));
+const scoreValue_span = document.querySelector("#score-value");
+scoreValue_span.innerHTML = localStorage.getItem("scoreValue");
 const paperButton_div = document.querySelector("#paper-container");
 const scissorsButton_div = document.querySelector("#scissors-container");
 const rockButton_div = document.querySelector("#rock-container");
@@ -9,7 +11,6 @@ const userChoiceContainer = document.querySelector(".user-choice");
 const computerChoiceContainer = document.querySelector(".computer-choice");
 const imageUser = document.querySelector("#white-circle-image-user");
 const imageComputer = document.querySelector("#white-circle-image-computer");
-const scoreValue_span = document.querySelector("#score-value");
 const playAgain = document.querySelector("#play-again");
 const winMessage = document.querySelector("#you-win");
 const loseMessage = document.querySelector("#you-lose");
@@ -42,6 +43,7 @@ function win(usersChoice, computerChoice) {
 
   setTimeout(() => {
     scoreValue++;
+    localStorage.setItem("scoreValue", scoreValue.toString());
     scoreValue_span.innerHTML = scoreValue;
     playAgain.style.display = "inline-block";
     winMessage.style.display = "block";
@@ -54,6 +56,7 @@ function lose(usersChoice, computerChoice) {
 
   setTimeout(() => {
     scoreValue--;
+    localStorage.setItem("scoreValue", scoreValue.toString());
     scoreValue_span.innerHTML = scoreValue;
     playAgain.style.display = "inline-block";
     loseMessage.style.display = "block";
