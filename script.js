@@ -30,15 +30,12 @@ function main() {
 main();
 
 function getComputerChoice() {
-
   const choices = ["p", "s", "r"];
   let option = Math.floor(Math.random() * 3);
   return choices[option];
-
 }
 
 function win(usersChoice, computerChoice) {
-
   initialContainer_div.style.display = "none";
   resultContainer_div.style.display = "flex";
   changePicture(usersChoice, computerChoice);
@@ -49,10 +46,8 @@ function win(usersChoice, computerChoice) {
     playAgain.style.display = "inline-block";
     winMessage.style.display = "block";
   }, 1500);
-
 }
 function lose(usersChoice, computerChoice) {
-
   initialContainer_div.style.display = "none";
   resultContainer_div.style.display = "flex";
   changePicture(usersChoice, computerChoice);
@@ -63,11 +58,9 @@ function lose(usersChoice, computerChoice) {
     playAgain.style.display = "inline-block";
     loseMessage.style.display = "block";
   }, 1500);
-
 }
 
 function draw(usersChoice, computerChoice) {
-
   initialContainer_div.style.display = "none";
   resultContainer_div.style.display = "flex";
   changePicture(usersChoice, computerChoice);
@@ -77,11 +70,9 @@ function draw(usersChoice, computerChoice) {
     drawMessage.style.display = "block";
     return;
   }, 1500);
-
 }
 
 playAgain.addEventListener("click", () => {
-
   resultContainer_div.style.display = "none";
   playAgain.style.display = "none";
   drawMessage.style.display = "none";
@@ -91,12 +82,13 @@ playAgain.addEventListener("click", () => {
   userChoiceContainer.classList.remove("paper");
   userChoiceContainer.classList.remove("scissors");
   userChoiceContainer.classList.remove("rock");
+  computerChoiceContainer.classList.remove("paper");
+  computerChoiceContainer.classList.remove("scissors");
+  computerChoiceContainer.classList.remove("rock");
   initialContainer_div.style.display = "inline-block";
-
 });
 
 function changePicture(user, computer) {
-
   setTimeout(() => {
     computerChoiceContainer.style.display = "flex";
   }, 500);
@@ -114,7 +106,6 @@ function changePicture(user, computer) {
       userChoiceContainer.classList.add("scissors");
       imageUser.src = "images/icon-scissors.svg";
       break;
-
   }
 
   switch (computer) {
@@ -131,10 +122,8 @@ function changePicture(user, computer) {
       imageComputer.src = "images/icon-scissors.svg";
       break;
   }
-
 }
 function game(usersChoice) {
-  
   const computerChoice = getComputerChoice();
 
   switch (usersChoice + computerChoice) {
