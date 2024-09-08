@@ -281,7 +281,7 @@ dialog button {
 #its-a-draw {
   position: absolute;
   color: white;
-  top: 240px;
+  top: 216px;
   left: 50%;
   transform: translate(-50%);
   font-size: 5.6rem;
@@ -292,7 +292,7 @@ dialog button {
 #play-again {
   position: absolute;
   color: var(--dark-text);
-  top: 328px;
+  top: 304px;
   left: 50%;
   transform: translate(-50%);
   font: 600 1.6rem "Barlow Semi Condensed", sans-serif;
