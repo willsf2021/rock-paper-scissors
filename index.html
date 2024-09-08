@@ -21,22 +21,76 @@
   <body>
     <main>
       <section id="header">
-        <h1>ROCK PAPER SCISSORS</h1>
+        <img src="images/logo.svg" alt="" />
         <div id="score-container">
           <p>SCORE</p>
-          <span id="score-value">12</span>
+          <span id="score-value">0</span>
         </div>
       </section>
-      <section>
-        
+      <section id="main">
+        <div id="initial-container">
+          <img id="triangle" src="images/bg-triangle.svg" alt="" />
+          <div id="paper-scissors-container">
+            <div id="paper-container" class="border paper">
+              <div class="white-circle">
+                <img src="images/icon-paper.svg" alt="paper-icon" />
+              </div>
+            </div>
+            <div id="scissors-container" class="border scissors">
+              <div class="white-circle">
+                <img src="images/icon-scissors.svg" alt="scissors-icon" />
+              </div>
+            </div>
+          </div>
+          <div id="rock-container">
+            <div class="border rock">
+              <div class="white-circle">
+                <img src="images/icon-rock.svg" alt="rock-icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="result-container">
+          <div class="user-choice">
+            <div class="white-circle">
+              <img id="white-circle-image-user" alt="User Choice" />
+            </div>
+          </div>
+          <h2 class="you-picked">YOU PICKED</h2>
+          <div id="empty"></div>
+          <div class="computer-choice">
+            <div class="white-circle">
+              <img
+                id="white-circle-image-computer"
+                src=""
+                alt="Computer Choice"
+              />
+            </div>
+          </div>
+          <h2 class="house-picked">THE HOUSE PICKED</h2>
+          <h2 id="you-win">YOU WIN</h2>
+          <h2 id="you-lose">YOU LOSE</h2>
+          <h2 id="its-a-draw">IT'S A DRAW</h2>
+          <button id="play-again">PLAY AGAIN</button>
+        </div>
       </section>
-    </main>
 
+      <button id="open-rules">RULES</button>
+    </main>
+    <dialog>
+      <h1>RULES</h1>
+      <img src="images/image-rules.svg" alt="Rules Image" />
+      <button id="close-rules">
+        <img src="images/icon-close.svg" alt="Icon Close Rules" />
+      </button>
+    </dialog>
     <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
+    <script src="script.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>
